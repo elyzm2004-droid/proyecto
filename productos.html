@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Pastelería Gourmet</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="productos.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <a href="index.html" class="logo-text">Pastelería Gourmet</a>
+                </div>
+                <nav class="nav-links">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="productos.html" class="nav-link active">Productos</a>
+                    <a href="contacto.html" class="nav-link">Contacto</a>
+                </nav>
+                <button class="cart-button" id="cartButton" onclick="openCart()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Nuestros Productos</h1>
+            <p class="page-subtitle">Descubre toda nuestra selección de delicias artesanales</p>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="category-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterCategory('all')">Todos</button>
+                <button class="filter-btn" onclick="filterCategory('cakes')">Pasteles</button>
+                <button class="filter-btn" onclick="filterCategory('cheesecakes')">Cheesecakes</button>
+                <button class="filter-btn" onclick="filterCategory('desserts')">Postres</button>
+                <button class="filter-btn" onclick="filterCategory('pastries')">Pastelería</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="cakes">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1657875861147-d1456a1eb65d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaG9jb2xhdGUlMjBjYWtlJTIwZ291cm1ldHxlbnwxfHx8fDE3NjU0MDQxMDR8MA&ixlib=rb-4.1.0&q=80&w=1080" 
+                             alt="Pastel de Chocolate Belga">
+                        <div class="product-badge">Bestseller</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Pastel de Chocolate Belga</h3>
+                        <p class="product-description">Decadente chocolate belga con capas de ganache</p>
+                        <div class="product-footer">
+                            <span class="product-price">$ 45.000</span>
+                            <button class="btn-add-cart" onclick="addToCart(1, 'Pastel de Chocolate Belga', 45000, 'https://images.unsplash.com/photo-1657875861147-d1456a1eb65d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaG9jb2xhdGUlMjBjYWtlJTIwZ291cm1ldHxlbnwxfHx8fDE3NjU0MDQxMDR8MA&ixlib=rb-4.1.0&q=80&w=1080')">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                                <span>Agregar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="cheesecakes">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1553882299-9601a48ebe6a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHJhd2JlcnJ5JTIwY2hlZXNlY2FrZXxlbnwxfHx8fDE3NjU1MTQ5Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080" 
+                             alt="Cheesecake de Fresas">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Cheesecake de Fresas</h3>
+                        <p class="product-description">Cremoso queso con fresas frescas y coulis</p>
+                        <div class="product-footer">
+                            <span class="product-price">$ 38.000</span>
+                            <button class="btn-add-cart" onclick="addToCart(2, 'Cheesecake de Fresas', 38000, 'https://images.unsplash.com/photo-1553882299-9601a48ebe6a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHJhd2JlcnJ5JTIwY2hlZXNlY2FrZXxlbnwxfHx8fDE3NjU1MTQ5Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080')">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                                <span>Agregar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="desserts">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1709224880492-604a7b15c11d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmcmVuY2glMjBtYWNhcm9ucyUyMGNvbG9yZnVsfGVufDF8fHx8MTc2NTQ4MDM4NXww&ixlib=rb-4.1.0&q=80&w=1080" 
+                             alt="Macarons Franceses">
+                        <div class="product-badge">Nuevo</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Macarons Franceses</h3>
+                        <p class="product-description">Selección de 12 macarons en sabores variados</p>
+                        <div class="product-footer">
+                            <span class="product-price">$ 35.000</span>
+                            <button class="btn-add-cart" onclick="addToCart(3, 'Macarons Franceses', 35000, 'https://images.unsplash.com/photo-1709224880492-604a7b15c11d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmcmVuY2glMjBtYWNhcm9ucyUyMGNvbG9yZnVsfGVufDF8fHx8MTc2NTQ4MDM4NXww&ixlib=rb-4.1.0&q=80&w=1080')">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                                <span>Agregar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="desserts">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1714385905983-6f8e06fffae1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aXJhbWlzdSUyMGRlc3NlcnR8ZW58MXx8fHwxNzY1NDUzNDc3fDA&ixlib=rb-4.1.0&q=80&w=1080" 
+                             alt="Tiramisú Italiano">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Tiramisú Italiano</h3>
+                        <p class="product-description">Clásico italiano con mascarpone y café espresso</p>
+                        <div class="product-footer">
+                            <span class="product-price">$ 42.000</span>
+                            <button class="btn-add-cart" onclick="addToCart(4, 'Tiramisú Italiano', 42000, 'https://images.unsplash.com/photo-1714385905983-6f8e06fffae1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aXJhbWlzdSUyMGRlc3NlcnR8ZW58MXx8fHwxNzY1NDUzNDc3fDA&ixlib=rb-4.1.0&q=80&w=1080')">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                                <span>Agregar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-category="cakes">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1648412009969-de91a17f4340?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsZW1vbiUyMHRhcnQlMjBwYXN0cnl8ZW58MXx8fHwxNzY1NTE0OTc5fDA&ixlib=rb-4.1.0&q=80&w=1080" 
+                             alt="Tarta de Limón">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Tarta de Limón</h3>
+                        <p class="product-description">Refrescante limón con merengue suizo tostado</p>
+                        <div class="product-footer">
+                            <span class="product-price">$ 36.000</span>
+                            <button class="btn-add-cart" onclick="addToCart(5, 'Tarta de Limón', 36000, 'https://images.unsplash.com/photo-1648412009969-de91a17f4340?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsZW1vbiUyMHRhcnQlMjBwYXN0cnl8ZW58MXx8fHwxNzY1NTE0OTc5fDA&ixlib=rb-4.1.0&q=80&w=1080')">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                                <span>Agregar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-category="cakes">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1586788680434-30d324b2d46f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWQlMjB2ZWx2ZXQlMjBjYWtlfGVufDF8fHx8MTc2NTQxOTU0NHww&ixlib=rb-4.1.0&q=80&w=1080" 
+                             alt="Red Velvet Clásico">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Red Velvet Clásico</h3>
+                        <p class="product-description">Suave terciopelo rojo con frosting de queso crema</p>
+                        <div class="product-footer">
+                            <span class="product-price">$ 40.000</span>
+                            <button class="btn-add-cart" onclick="addToCart(6, 'Red Velvet Clásico', 40000, 'https://images.unsplash.com/photo-1586788680434-30d324b2d46f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWQlMjB2ZWx2ZXQlMjBjYWtlfGVufDF8fHx8MTc2NTQxOTU0NHww&ixlib=rb-4.1.0&q=80&w=1080')">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                                <span>Agregar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card" data-category="desserts">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1600331073509-0354a33404b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjdXBjYWtlcyUyMHN3ZWV0fGVufDF8fHx8MTc2NTQ1OTM4Nnww&ixlib=rb-4.1.0&q=80&w=1080" 
+                             alt="Cupcakes Gourmet">
+                        <div class="product-badge">Popular</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Cupcakes Gourmet</h3>
+                        <p class="product-description">Set de 6 cupcakes decorados artesanalmente</p>
+                        <div class="product-footer">
+                            <span class="product-price">$ 28.000</span>
+                            <button class="btn-add-cart" onclick="addToCart(7, 'Cupcakes Gourmet', 28000, 'https://images.unsplash.com/photo-1600331073509-0354a33404b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjdXBjYWtlcyUyMHN3ZWV0fGVufDF8fHx8MTc2NTQ1OTM4Nnww&ixlib=rb-4.1.0&q=80&w=1080')">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                                <span>Agregar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card" data-category="desserts">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1568955944284-e0c843687a62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb251dHMlMjBjb2xvcmZ1bHxlbnwxfHx8fDE3NjU1MTc3NTB8MA&ixlib=rb-4.1.0&q=80&w=1080" 
+                             alt="Donas Artesanales">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Donas Artesanales</h3>
+                        <p class="product-description">Caja de 6 donas con glaseados especiales</p>
+                        <div class="product-footer">
+                            <span class="product-price">$ 25.000</span>
+                            <button class="btn-add-cart" onclick="addToCart(8, 'Donas Artesanales', 25000, 'https://images.unsplash.com/photo-1568955944284-e0c843687a62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb251dHMlMjBjb2xvcmZ1bHxlbnwxfHx8fDE3NjU1MTc3NTB8MA&ixlib=rb-4.1.0&q=80&w=1080')">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                                <span>Agregar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card" data-category="pastries">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1712723247648-64a03ba7c333?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcm9pc3NhbnQlMjBwYXN0cnl8ZW58MXx8fHwxNzY1NDkyMDQyfDA&ixlib=rb-4.1.0&q=80&w=1080" 
+                             alt="Croissants Franceses">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Croissants Franceses</h3>
+                        <p class="product-description">Set de 4 croissants mantequilla fresca</p>
+                        <div class="product-footer">
+                            <span class="product-price">$ 22.000</span>
+                            <button class="btn-add-cart" onclick="addToCart(9, 'Croissants Franceses', 22000, 'https://images.unsplash.com/photo-1712723247648-64a03ba7c333?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcm9pc3NhbnQlMjBwYXN0cnl8ZW58MXx8fHwxNzY1NDkyMDQyfDA&ixlib=rb-4.1.0&q=80&w=1080')">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                                <span>Agregar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card" data-category="desserts">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1617996884841-3949eaec3448?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicm93bmllcyUyMGNob2NvbGF0ZXxlbnwxfHx8fDE3NjU0NjEwMTd8MA&ixlib=rb-4.1.0&q=80&w=1080" 
+                             alt="Brownies Premium">
+                        <div class="product-badge">Nuevo</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Brownies Premium</h3>
+                        <p class="product-description">Caja de 6 brownies de chocolate belga</p>
+                        <div class="product-footer">
+                            <span class="product-price">$ 30.000</span>
+                            <button class="btn-add-cart" onclick="addToCart(10, 'Brownies Premium', 30000, 'https://images.unsplash.com/photo-1617996884841-3949eaec3448?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicm93bmllcyUyMGNob2NvbGF0ZXxlbnwxfHx8fDE3NjU0NjEwMTd8MA&ixlib=rb-4.1.0&q=80&w=1080')">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                                <span>Agregar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 11 -->
+                <div class="product-card" data-category="cheesecakes">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1741244133042-970251e76066?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb3VybWV0JTIwY2FrZSUyMGVsZWdhbnR8ZW58MXx8fHwxNzY1NTE0OTc3fDA&ixlib=rb-4.1.0&q=80&w=1080" 
+                             alt="Cheesecake Clásico">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Cheesecake Clásico</h3>
+                        <p class="product-description">Tradicional cheesecake de Nueva York</p>
+                        <div class="product-footer">
+                            <span class="product-price">$ 35.000</span>
+                            <button class="btn-add-cart" onclick="addToCart(11, 'Cheesecake Clásico', 35000, 'https://images.unsplash.com/photo-1741244133042-970251e76066?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb3VybWV0JTIwY2FrZSUyMGVsZWdhbnR8ZW58MXx8fHwxNzY1NTE0OTc3fDA&ixlib=rb-4.1.0&q=80&w=1080')">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                                <span>Agregar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 12 -->
+                <div class="product-card" data-category="pastries">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1765395958722-e0cb9f7337e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYWtlcnklMjBwcm9kdWN0cyUyMGRpc3BsYXl8ZW58MXx8fHwxNzY1NTE3NzQ4fDA&ixlib=rb-4.1.0&q=80&w=1080" 
+                             alt="Mix de Pastelería">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Mix de Pastelería</h3>
+                        <p class="product-description">Selección variada de 12 piezas dulces</p>
+                        <div class="product-footer">
+                            <span class="product-price">$ 48.000</span>
+                            <button class="btn-add-cart" onclick="addToCart(12, 'Mix de Pastelería', 48000, 'https://images.unsplash.com/photo-1765395958722-e0cb9f7337e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYWtlcnklMjBwcm9kdWN0cyUyMGRpc3BsYXl8ZW58MXx8fHwxNzY1NTE3NzQ4fDA&ixlib=rb-4.1.0&q=80&w=1080')">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                                <span>Agregar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 class="footer-title">Pastelería Gourmet</h4>
+                    <p class="footer-text">Creando momentos dulces desde 2020. Pasión por la repostería artesanal.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Enlaces</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Contacto</h4>
+                    <ul class="footer-links">
+                        <li>estudiantesgrupo10@unibarranquilla.com</li>
+                        <li>+57 300 716 8999</li>
+                        <li>Cra 18 #39-100, Soledad - Atlántico</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="#fef7f0" stroke-width="2"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#fef7f0" stroke-width="2"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pastelería Gourmet - Grupo 10. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Cart Button (Mobile) -->
+    <button class="floating-cart" id="floatingCart" onclick="openCart()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="floating-cart-badge" id="floatingCartBadge">0</span>
+    </button>
+
+    <script src="home.js"></script>
+    <script src="productos.js"></script>
+</body>
+</html>

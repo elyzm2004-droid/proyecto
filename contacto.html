@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Pastelería Gourmet</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <a href="index.html" class="logo-text">Pastelería Gourmet</a>
+                </div>
+                <nav class="nav-links">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="productos.html" class="nav-link">Productos</a>
+                    <a href="contacto.html" class="nav-link active">Contacto</a>
+                </nav>
+                <button class="cart-button" id="cartButton" onclick="openCart()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Contáctanos</h1>
+            <p class="page-subtitle">Estamos aquí para responder todas tus preguntas</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info-wrapper">
+                    <div class="contact-info-card">
+                        <h2 class="section-title-small">Información de Contacto</h2>
+                        <p class="section-description">Comunícate con nosotros a través de cualquiera de estos medios</p>
+                        
+                        <div class="info-items">
+                            <!-- Nombre/Grupo -->
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </div>
+                                <div class="info-content">
+                                    <h4 class="info-title">Nombre</h4>
+                                    <p class="info-text">Grupo 10</p>
+                                </div>
+                            </div>
+
+                            <!-- Teléfono -->
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                </div>
+                                <div class="info-content">
+                                    <h4 class="info-title">Teléfono</h4>
+                                    <p class="info-text">+57 300 716 8999</p>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="info-content">
+                                    <h4 class="info-title">Correo Electrónico</h4>
+                                    <p class="info-text">estudiantesgrupo10@unibarranquilla.com</p>
+                                </div>
+                            </div>
+
+                            <!-- Ubicación -->
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div class="info-content">
+                                    <h4 class="info-title">Ubicación</h4>
+                                    <p class="info-text">Cra 18 #39-100<br>Soledad - Atlántico, Colombia</p>
+                                </div>
+                            </div>
+
+                            <!-- Horario -->
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="info-content">
+                                    <h4 class="info-title">Horario de Atención</h4>
+                                    <p class="info-text">Lunes a Viernes: 8:00 AM - 6:00 PM<br>Sábados: 9:00 AM - 5:00 PM<br>Domingos: Cerrado</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="contact-social">
+                            <h4 class="social-title">Síguenos en Redes Sociales</h4>
+                            <div class="social-links-contact">
+                                <a href="#" class="social-link-contact">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-link-contact">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="#fef7f0" stroke-width="2"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#fef7f0" stroke-width="2"></line>
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-link-contact">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-link-contact">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                        <rect x="2" y="9" width="4" height="12"></rect>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <div class="contact-form-card">
+                        <h2 class="section-title-small">Envíanos un Mensaje</h2>
+                        <p class="section-description">Completa el formulario y te responderemos lo antes posible</p>
+                        
+                        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Nombre Completo *</label>
+                                    <input type="text" class="form-input" placeholder="Tu nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Correo Electrónico *</label>
+                                    <input type="email" class="form-input" placeholder="tu@correo.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Teléfono</label>
+                                    <input type="tel" class="form-input" placeholder="+57 300 123 4567">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Asunto *</label>
+                                    <select class="form-input" required>
+                                        <option value="">Selecciona un asunto</option>
+                                        <option value="pedido">Consulta sobre pedido</option>
+                                        <option value="producto">Información de producto</option>
+                                        <option value="evento">Pedidos especiales/eventos</option>
+                                        <option value="sugerencia">Sugerencia</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Mensaje *</label>
+                                <textarea class="form-input form-textarea" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-submit">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                                <span>Enviar Mensaje</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title-center">Encuéntranos</h2>
+            <p class="section-subtitle-center">Visítanos en nuestra ubicación en Soledad, Atlántico</p>
+            
+            <div class="map-container">
+                <!-- Google Maps iframe para Cra 18 #39-100, Soledad, Atlántico -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.3789857765344!2d-74.77124842408664!3d10.911948889256996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42da86e79fae3%3A0x1f7d4f9f9f9f9f9f!2sCra.%2018%20%2339-100%2C%20Soledad%2C%20Atl%C3%A1ntico%2C%20Colombia!5e0!3m2!1ses!2sco!4v1702000000000!5m2!1ses!2sco" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0; border-radius: 24px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <div class="map-info">
+                <div class="map-info-card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <div>
+                        <h4>Dirección</h4>
+                        <p>Cra 18 #39-100, Soledad - Atlántico</p>
+                    </div>
+                </div>
+                <div class="map-info-card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <div>
+                        <h4>Horario</h4>
+                        <p>Lun - Vie: 8:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+                <div class="map-info-card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <div>
+                        <h4>Teléfono</h4>
+                        <p>+57 300 716 8999</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 class="footer-title">Pastelería Gourmet</h4>
+                    <p class="footer-text">Creando momentos dulces desde 2020. Pasión por la repostería artesanal.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Enlaces</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Contacto</h4>
+                    <ul class="footer-links">
+                        <li>estudiantesgrupo10@unibarranquilla.com</li>
+                        <li>+57 300 716 8999</li>
+                        <li>Cra 18 #39-100, Soledad - Atlántico</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="#fef7f0" stroke-width="2"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#fef7f0" stroke-width="2"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pastelería Gourmet - Grupo 10. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Cart Button (Mobile) -->
+    <button class="floating-cart" id="floatingCart" onclick="openCart()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="floating-cart-badge" id="floatingCartBadge">0</span>
+    </button>
+
+    <script src="home.js"></script>
+    <script src="contacto.js"></script>
+</body>
+</html>

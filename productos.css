@@ -1,0 +1,130 @@
+/* Productos CSS - Estilos adicionales para la página de productos */
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, rgba(244, 165, 164, 0.2) 0%, rgba(255, 218, 217, 0.3) 100%);
+    padding: 4rem 0 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+}
+
+.page-subtitle {
+    font-size: 1.25rem;
+    color: #666;
+}
+
+/* Active Navigation Link */
+.nav-link.active {
+    color: #f4a5a4;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Category Filter */
+.category-filter {
+    padding: 2rem 0;
+    background-color: white;
+    border-bottom: 1px solid rgba(244, 165, 164, 0.1);
+    position: sticky;
+    top: 80px;
+    z-index: 30;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    color: #1a1a1a;
+    border: 2px solid #e5e5e5;
+    border-radius: 50px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    border-color: #f4a5a4;
+    color: #f4a5a4;
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #f4a5a4 0%, #d48383 100%);
+    color: white;
+    border-color: #f4a5a4;
+}
+
+/* Products Section */
+.products-section {
+    padding: 3rem 0 5rem;
+}
+
+/* Product Card Hidden State */
+.product-card.hidden {
+    display: none;
+}
+
+/* Product Card Animation */
+.product-card {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+    }
+
+    .page-header {
+        padding: 3rem 0 2rem;
+    }
+
+    .category-filter {
+        position: static;
+    }
+
+    .filter-buttons {
+        padding: 0 1rem;
+    }
+
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+}
